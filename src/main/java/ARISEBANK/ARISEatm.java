@@ -6,6 +6,7 @@ import javax.swing.*;
 
 public class ARISEatm extends JPanel {
     public ARISEatm(JFrame frame) {
+        ARISE.closeAllReceipts();
         setLayout(null);
 
         JLabel backgroundLabel = new JLabel(new ImageIcon("src/main/resources/Photos/p.png"));

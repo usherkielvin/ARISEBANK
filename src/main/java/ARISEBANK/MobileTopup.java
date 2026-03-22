@@ -650,7 +650,9 @@ public class MobileTopup extends JPanel {
             JOptionPane.showMessageDialog(frame, 
                             "Thank you for banking with us.\n     Together, We Rise!", 
                             "ARISE BANK", JOptionPane.INFORMATION_MESSAGE);
-                        System.exit(0);
+            frame.setContentPane(new ARISEatm(frame));
+            frame.revalidate();
+            frame.repaint();
         }
     }
     private void askForAReceipt() {
@@ -665,7 +667,12 @@ public class MobileTopup extends JPanel {
             new Receipt("MOBILE LOAD", loadAmount,ARISE.Currentbalance).setVisible(true);
             timer();
         } else {
-           askForAnotherTransaction();
+            JOptionPane.showMessageDialog(frame, 
+                            "Thank you for banking with us.\n     Together, We Rise!", 
+                            "ARISE BANK", JOptionPane.INFORMATION_MESSAGE);
+            frame.setContentPane(new ARISEatm(frame));
+            frame.revalidate();
+            frame.repaint();
         }
     }
     private void resetScreen() {

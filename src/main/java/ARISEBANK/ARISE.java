@@ -99,7 +99,7 @@ public class ARISE extends JFrame {
     }
     public static void print() {
         try {
-            File soundFile = new File("src/main/resources/zprin.wav");
+            File soundFile = new File("src/main/resources/Sounds/zprin.wav");
             AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
             Clip clip = AudioSystem.getClip();
             clip.open(audioIn);
@@ -108,15 +108,21 @@ public class ARISE extends JFrame {
             e.printStackTrace();
         }
     }
-
-    
-
+    public static void closeAllReceipts() {
+        for (Window window : Window.getWindows()) {
+            if (window instanceof Receipt) {
+                window.dispose();
+            }
+        }
+    }
 }
 class Receipt extends JFrame {
     public Receipt(String transactionType, float amount, float balance) {
         ARISE.print();
         setTitle("Receipt");
+
         ImageIcon framelogo = new ImageIcon("src/main/resources/Photos/ARISElogo.png");
+
         setIconImage(framelogo.getImage());
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(200, 350);
@@ -125,6 +131,7 @@ class Receipt extends JFrame {
         setBackground(new Color(0, 0, 0, 0));
         setResizable(false);
         setLayout(null);
+        
         ImageIcon framelogo1 = new ImageIcon("src/main/resources/Photos/ARISElogo.png");
         setIconImage(framelogo1.getImage());
         JPanel recieptPanel = new JPanel(null);
@@ -200,7 +207,8 @@ class Receipt extends JFrame {
         balanceLabel.setBounds(15, 220, 100, 30);
         balanceValue.setBounds(40, 220, 150, 30);
         line.setBounds(15, 160, 300, 30);
-        logo.setBounds(55, 24, 100, 50);
+        logo.setBounds(50, 15, 100, 50);
+        title.setBounds(50, 65, 100, 30);
    
         qr.setBounds(55, 260, 100, 50);
 

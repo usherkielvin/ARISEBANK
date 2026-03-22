@@ -8,6 +8,7 @@ import javax.swing.*;
 public class ARISEmenu extends JPanel {
 
     public ARISEmenu(JFrame frame) {
+        ARISE.closeAllReceipts();
         setLayout(null);
         ARISE.jtheme();
 //BACKGROUND LABEL

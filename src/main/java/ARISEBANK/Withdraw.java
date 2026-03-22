@@ -822,7 +822,12 @@ History.addTransaction("WITHDRAWAL", withdrawedAmount, ARISE.Currentbalance, atm
                     timer.setRepeats(false);
                     timer.start();
                 } else {
-                    returnReciept();
+            JOptionPane.showMessageDialog(frame, 
+                            "Thank you for banking with us.\n     Together, We Rise!", 
+                            "ARISE BANK", JOptionPane.INFORMATION_MESSAGE);
+            frame.setContentPane(new ARISEatm(frame));
+            frame.revalidate();
+            frame.repaint();
                 }
             }
             

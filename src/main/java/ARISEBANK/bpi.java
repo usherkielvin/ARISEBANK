@@ -643,7 +643,9 @@ amount = new JLabel("Amount (Max of PHP 50,000.00)");
             JOptionPane.showMessageDialog(frame, 
                             "Thank you for banking with us.\n     Together, We Rise!", 
                             "ARISE BANK", JOptionPane.INFORMATION_MESSAGE);
-                        System.exit(0);
+            frame.setContentPane(new ARISEatm(frame));
+            frame.revalidate();
+            frame.repaint();
         }
     }
     private void askForAReceipt() {
@@ -664,7 +666,12 @@ amount = new JLabel("Amount (Max of PHP 50,000.00)");
           
             
         } else {
-           askForAnotherTransaction();
+            JOptionPane.showMessageDialog(frame, 
+                            "Thank you for banking with us.\n     Together, We Rise!", 
+                            "ARISE BANK", JOptionPane.INFORMATION_MESSAGE);
+            frame.setContentPane(new ARISEatm(frame));
+            frame.revalidate();
+            frame.repaint();
         }
     }
     private void resetScreen() {
