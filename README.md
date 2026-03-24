@@ -1,5 +1,7 @@
-# ARISE Bank ATM Application
-
+<div align="center">
+  <img src="src/main/resources/Photos/ARISElogo.png" alt="ARISE Bank Logo" width="150" />
+  <h1>ARISE Bank ATM Application</h1>
+</div>
 A simple Java-based ATM simulation program built with Java Swing for a school project.
 
 ## Project Overview
